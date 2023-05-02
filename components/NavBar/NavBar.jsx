@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { DiJqueryLogo } from "react-icons/di";
 //----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
