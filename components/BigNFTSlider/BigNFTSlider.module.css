@@ -125,9 +125,9 @@
 .bigNFTSlider_box_left_sliderBtn{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .bigNFTSlider_box_left_sliderBtn_icon{
