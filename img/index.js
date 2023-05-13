@@ -65,6 +65,7 @@ import transfer from "./transfer.gif";
 import transferEther from "./ethereTransfer.gif";
 import virat from "./virat.jpg";
 import shreyans from "./shreyans.jpg";
+import coy from "./coy.png";
 
 export default {
   hero2,
@@ -134,4 +135,5 @@ export default {
   transferEther,
   virat,
   shreyans,
+  coy,
 };
