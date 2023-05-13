@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BsImages } from "react-icons/bs";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 //INTERNAL IMPORT
