@@ -12,6 +12,7 @@ import NFTCard from "./NFTCard/NFTCard"
 import Collection from "./Collection/Collection"
 import FollowerTab from "./FollowerTab/FollowerTab"
 
+
 export {Button, 
         Footer, 
         NavBar, 
@@ -25,4 +26,5 @@ export {Button,
         NFTCard,
         Collection,
         FollowerTab,
+        
     };
