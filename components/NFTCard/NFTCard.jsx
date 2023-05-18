@@ -72,7 +72,7 @@ const NFTCard = () => {
             <div className={Style.NFTCard_box_update_details_price}>
               <div className={Style.NFTCard_box_update_details_price_box}>
                 <h4>
-                  {el.name} #1001 Hatman{el.tokenId}
+                  {el.name} #1001 NFTART{el.tokenId}
                 </h4>
 
                 <div
