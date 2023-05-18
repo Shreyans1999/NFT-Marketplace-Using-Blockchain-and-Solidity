@@ -49,7 +49,7 @@ const FollowerTabCard = ({ i, el }) => {
           <div className={Style.FollowerTabCard_box_info_name}>
             <h4>
               Shreyans{/**Changes done at 6:40:00 */}
-              {""}
+              {""}{" "}
               <span>
                 <MdVerified />
               </span>
