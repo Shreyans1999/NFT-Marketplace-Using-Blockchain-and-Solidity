@@ -14,6 +14,7 @@ import FollowerTab from "./FollowerTab/FollowerTab"
 import LikeProfile from "./LikeProfile/LikeProfile"
 import AudioLive from "./AudioLive/AudioLive"
 import Slider from "./Slider/Slider"
+import Brand from "./Brand/Brand"
 
 
 export {Button, 
@@ -32,4 +33,5 @@ export {Button,
         LikeProfile,
         AudioLive,
         Slider,
+        Brand,
     };

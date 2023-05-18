@@ -12,6 +12,7 @@ import { HeroSection,
         AudioLive,
         FollowerTab,
         Slider,
+        Brand,
       } from "../components/componentsindex";
 
 const HOME = () => {
@@ -40,6 +41,7 @@ const HOME = () => {
       />
       <Category/>
       <Subscribe/>
+      <Brand/>
     </div>
   );
 };
