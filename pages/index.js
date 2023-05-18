@@ -13,6 +13,7 @@ import { HeroSection,
         FollowerTab,
         Slider,
         Brand,
+        Video,
       } from "../components/componentsindex";
 
 const HOME = () => {
@@ -42,6 +43,7 @@ const HOME = () => {
       <Category/>
       <Subscribe/>
       <Brand/>
+      <Video/>
     </div>
   );
 };
