@@ -7,7 +7,7 @@
 .subscribe_box{
     width: 80%;
     margin: 0 auto;
-    padding:  8rem 0;
+    margin-top: 50px;
 
     display: grid;
     grid-template-columns: 1.5fr 2fr;
