@@ -9,7 +9,7 @@ import { HeroSection,
         Filter,
         NFTCard,
         Collection,
-        
+        AudioLive,
         FollowerTab,
         
       } from "../components/componentsindex";
@@ -20,6 +20,11 @@ const HOME = () => {
       <HeroSection/>
       <Service/>
       <BigNFTSlider/>
+      <Title
+        heading="Latest Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <AudioLive/>
       <FollowerTab/>
       <Collection/>
       <Title
