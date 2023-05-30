@@ -87,7 +87,7 @@ const author = () => {
         setCreated={setCreated}
         setLike={setLike}
         setFollower={setFollower}
-        setFollowing={setFollowing}
+        setFollowing={setFollowing} 
         //currentAccount={currentAccount}
       />
 
@@ -102,8 +102,7 @@ const author = () => {
       />
       <Title
         heading="Popular Creators"
-        paragraph="Click on music icon and enjoy NTF music or audio
-"
+        paragraph="Click on music icon and enjoy NTF music or audio"
       />
       <div className={Style.author_box}>
         {followerArray.map((el, i) => (

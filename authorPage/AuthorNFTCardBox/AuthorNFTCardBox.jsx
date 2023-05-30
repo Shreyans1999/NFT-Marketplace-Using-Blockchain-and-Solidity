@@ -17,30 +17,64 @@ const AuthorNFTCardBox = ({
   myNFTS,
 }) => {
   const collectiablesArray = [
-     images.nft_image_1,
-     images.nft_image_2,
-     images.nft_image_3,
-     images.nft_image_1,
-     images.nft_image_2,
-     images.nft_image_3,
-     images.nft_image_1,
-     images.nft_image_2,
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
    ];
 
-  // const createdArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  // ];
+  const createdArray = [
+    {
+      image: images.nft_image_2,
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+  ];
 
-  // const likeArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  // ];
+  const likeArray = [
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+  ];
 
   const followerArray = [
     {
@@ -105,9 +139,9 @@ const AuthorNFTCardBox = ({
 
   return (
     <div className={Style.AuthorNFTCardBox}>
-      {collectiables && <NFTCardTwo NFTData={nfts} />}
-      {created && <NFTCardTwo NFTData={myNFTS} />}
-      {like && <NFTCardTwo NFTData={nfts} />}
+      {collectiables && <NFTCardTwo NFTData={collectiablesArray} />}
+      {created && <NFTCardTwo NFTData={createdArray} />}
+      {like && <NFTCardTwo NFTData={likeArray} />}
       {follower && (
         <div className={Style.AuthorNFTCardBox_box}>
           {followerArray.map((el, i) => (
