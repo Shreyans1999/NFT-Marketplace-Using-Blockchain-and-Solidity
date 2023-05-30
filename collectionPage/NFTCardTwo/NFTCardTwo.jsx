@@ -57,7 +57,7 @@ const NFTCardTwo = ({ NFTData }) => {
             <div className={Style.NFTCardTwo_box_info}>
               <div className={Style.NFTCardTwo_box_info_left}>
                 <LikeProfile />
-                <p>{el.name}</p>
+                <p>Clone #{i+1}</p>
               </div>
               <small>4{i + 2}</small>
             </div>
