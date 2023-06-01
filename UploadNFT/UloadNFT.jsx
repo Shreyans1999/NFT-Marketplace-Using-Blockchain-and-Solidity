@@ -209,7 +209,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
             </div>
           </div>
         </div>
-
+        {/*Changes done at*/}
         <div className={Style.upload_box_btn}>
           <Button
             btnName="Upload"
