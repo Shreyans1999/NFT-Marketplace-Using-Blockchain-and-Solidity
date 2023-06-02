@@ -7,7 +7,9 @@ import { create as ipfsHttpClient } from "ipfs-http-client";
 
 const projectId = "2QeMDmib4Ct39v5GeYt1q1QrgMt";
 const projectSecretKey = "fe494fc9341d3471b9822b498cb0e8bb";
-const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString("base64")}`;
+const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString(
+  "base64"
+)}`;
 
 const subdomain = "https://shreyansmarketplace.infura-ipfs.io";
 
@@ -114,14 +116,13 @@ const connectingWithSmartContract = async () => {
 
     //---UPLOAD TO IPFS FUNCTION
     const uploadToIPFS = async (file) => {
-        try {
+      try {
         const added = await client.add({ content: file });
         const url = `${subdomain}/ipfs/${added.path}`;
         return url;
-        } catch (error) {
-        setError("Error Uploading to IPFS");
-        setOpenError(true);
-        }
+      } catch (error) {
+        console.log("Error Uploading to IPFS", error);
+      }
     };
 
     //---CREATENFT FUNCTION
@@ -133,7 +134,7 @@ const connectingWithSmartContract = async () => {
 
         try {
             const added = await client.add(data);
-            const url = `${subdomain}/ipfs/${added.path}`;
+            const url = `https://infura-ipfs.io/ipfs/${added.path}`;
 
             await createSale(url, price);
             router.push("/searchPage");

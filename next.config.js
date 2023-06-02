@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images: {
-    domains: ["https://shreyansmarketplace.infura-ipfs.io","infura-ipfs.io"],
+    domains: ["shreyansmarketplace.infura-ipfs.io", "infura-ipfs.io"],
   },
 }
 
