@@ -67,6 +67,7 @@ import virat from "./virat.jpg";
 import shreyans from "./shreyans.jpg";
 import coy from "./coy.png";
 import home from "./home.png";
+import logo1 from "./logo1.png"
 
 export default {
   hero2,
@@ -122,6 +123,7 @@ export default {
   service3,
   service4,
   logo,
+  logo1,
   logoLight,
   facebook,
   telegram,

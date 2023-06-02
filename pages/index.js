@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Style from "../styles/index.module.css";
 import { HeroSection, 
         Service, 
@@ -16,9 +16,18 @@ import { HeroSection,
         Video,
       } from "../components/componentsindex";
 
-const HOME = () => {
+//IMPORTING CONTRCT DATA
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+
+const Home = () => {
+  const { checkIfWalletConnected } = useContext(NFTMarketplaceContext);
+
+  useEffect(() => {
+    checkIfWalletConnected();
+  }, []);
+
   return (
-    <div className={Style.homePage}>
+    <div className={Style.homePage}> 
       <HeroSection/>
       <Service/>
       <BigNFTSlider/>
@@ -48,4 +57,4 @@ const HOME = () => {
   );
 };
 
-export default HOME
+export default Home

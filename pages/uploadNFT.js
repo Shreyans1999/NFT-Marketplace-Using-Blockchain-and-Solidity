@@ -5,10 +5,10 @@ import Style from "../styles/upload-nft.module.css";
 import { UploadNFT } from "../UploadNFT/uploadNFTIndex";
 
 //SMART CONTRACT IMPORT
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext"; 
 
 const uploadNFT = () => {
-  //const { uploadToIPFS, createNFT } = useContext(NFTMarketplaceContext);12:50:00
+const { uploadToIPFS, createNFT } = useContext(NFTMarketplaceContext);
   return (
     <div className={Style.uploadNFT}>
       <div className={Style.uploadNFT_box}>
@@ -29,7 +29,7 @@ const uploadNFT = () => {
         </div> 
 
         <div className={Style.uploadNFT_box_form}>
-          <UploadNFT /*uploadToIPFS={uploadToIPFS} createNFT={createNFT} changes done at 12:50:28 *//>
+          <UploadNFT uploadToIPFS={uploadToIPFS} createNFT={createNFT} />
         </div>
       </div>
     </div>
