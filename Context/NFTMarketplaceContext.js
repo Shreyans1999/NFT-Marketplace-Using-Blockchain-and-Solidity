@@ -61,6 +61,7 @@ const connectingWithSmartContract = async () => {
     
     //------USESTAT
     const [currentAccount, setCurrentAccount] = useState("");
+    const router = useRouter();
 
     //------CHECK IF WALLET IS CONNECTED
     const checkIfWalletConnected = async () => {
@@ -163,7 +164,8 @@ const connectingWithSmartContract = async () => {
             });
 
         await transaction.wait();
-        console.log(transaction);
+        router.push('/searchPage')
+        //console.log(transaction);
         } catch (error) {
         setError("error while creating sale");
         setOpenError(true);
@@ -171,54 +173,58 @@ const connectingWithSmartContract = async () => {
         }
     };
 
-    //--FETCHNFTS FUNCTION
-    const fetchNFTs = async () => {
-        try {
-        const provider = new ethers.providers.JsonRpcProvider();
+  //--FETCHNFTS FUNCTION
 
-        const contract = fetchContract(provider);
+  const fetchNFTs = async () => {
+    try {
+      const provider = new ethers.providers.JsonRpcProvider(
+        //--process.env.NEXT_PUBLIC_POLYGON_MUMBAI_RPC
+        "https://polygon-mumbai.g.alchemy.com/v2/0awa485pp03Dww2fTjrSCg7yHlZECw-K"
+      );
 
-        const data = await contract.fetchMarketItems();
+      const contract = fetchContract(provider);
 
-        const items = await Promise.all(
-            data.map(
-            async ({ tokenId, seller, owner, price: unformattedPrice }) => {
-                const tokenURI = await contract.tokenURI(tokenId); 
+      const data = await contract.fetchMarketItems();
 
-                const {
-                data: { image, name, description },
-                } = await axios.get(tokenURI, {});
-                const price = ethers.utils.formatUnits(
-                unformattedPrice.toString(),
-                "ether"
-                );
+      const items = await Promise.all(
+        data.map(
+          async ({ tokenId, seller, owner, price: unformattedPrice }) => {
+            const tokenURI = await contract.tokenURI(tokenId);
 
-                return {
-                price,
-                tokenId: tokenId.toNumber(),
-                seller,
-                owner,
-                image,
-                name,
-                description,
-                tokenURI,
-                };
-            }
-          )
-        );
-        return items;
+            const {
+              data: { image, name, description },
+            } = await axios.get(tokenURI, {});
+            const price = ethers.utils.formatUnits(
+              unformattedPrice.toString(),
+              "ether"
+            );
 
-        // }
-        } catch (error) {
-        // setError("Error while fetching NFTS");
-        // setOpenError(true);
-        console.log("Error while fetching nfts");
-        }
-    };
+            return {
+              price,
+              tokenId: tokenId.toNumber(),
+              seller,
+              owner,
+              image,
+              name,
+              description,
+              tokenURI,
+            };
+          }
+        )
+      );
+      return items;
 
-    useEffect(() => {
-        fetchNFTs();
-    }, []);
+      // }
+    } catch (error) {
+      // setError("Error while fetching NFTS");
+      // setOpenError(true);
+      console.log("Error while fetching NFTS");
+    }
+  };
+
+  useEffect(() => {
+    fetchNFTs();
+  }, []);
     
     //--FETCHING MY NFT OR LISTED NFTs
     const fetchMyNFTsOrListedNFTs = async (type) => {
