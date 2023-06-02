@@ -206,7 +206,7 @@ const connectingWithSmartContract = async () => {
               owner,
               image,
               name,
-              description,
+              description, 
               tokenURI,
             };
           }
