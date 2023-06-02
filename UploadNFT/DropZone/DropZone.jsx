@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 //INTRNAL IMPORT
 import Style from "./DropZone.module.css";

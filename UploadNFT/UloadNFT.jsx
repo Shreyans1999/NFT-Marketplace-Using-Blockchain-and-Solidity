@@ -3,7 +3,7 @@ import { MdOutlineHttp, MdOutlineAttachFile } from "react-icons/md";
 import { FaPercent } from "react-icons/fa";
 import { AiTwotonePropertySafety } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 
 //INTERNAL IMPORT
