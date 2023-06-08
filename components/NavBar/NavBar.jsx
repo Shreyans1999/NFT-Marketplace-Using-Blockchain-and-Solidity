@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { DiJqueryLogo } from "react-icons/di";
 //----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
@@ -145,7 +145,7 @@ const NavBar = () => {
           <div className={Style.navbar_container_right_profile_box}>
             <div className={Style.navbar_container_right_profile}>
               <Image
-                src={images.shreyans}
+                src={images.user1}
                 alt="Profile"
                 width={50}
                 height={50}

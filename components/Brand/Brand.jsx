@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { DiJqueryLogo } from "react-icons/di";
 import { useRouter } from "next/router";
 
@@ -14,11 +14,10 @@ const Brand = () => {
     <div className={Style.Brand}>
       <div className={Style.Brand_box}>
         <div className={Style.Brand_box_left}>
-          {/* <Image src={images.logo} alt="brand logo" width={100} height={100} /> */}
           <a href="/">
             <DiJqueryLogo className={Style.Brand_box_left_logo} />
           </a>
-          <h1>Earn free crypto with NFT Market Place</h1>
+          <h1>Trade crypto with Ease</h1>
           <p>A creative agency that lead and inspire.</p>
 
           <div className={Style.Brand_box_left_btn}>
@@ -33,7 +32,7 @@ const Brand = () => {
           </div>
         </div>
         <div className={Style.Brand_box_right}>
-          <Image src={images.earn} alt="brand logo" width={800} height={600} />
+          <Image src={images.earn} alt="brand logo" width={400} height={400} />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "./Service.module.css";
@@ -34,7 +34,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 2</span>
           </p>
-          <h3>Filter & Discover</h3>
+          <h3>Connect Wallet</h3>
           <p>
             Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
@@ -50,7 +50,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 3</span>
           </p>
-          <h3>Connect Wallet</h3>
+          <h3>Start Trading</h3>
           <p>
             Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
@@ -58,7 +58,7 @@ const Service = () => {
         </div>
         <div className={Style.service_box_item}>
           <Image
-            src={images.service1}
+            src={images.service4}
             alt="Filter & Discover"
             width={100}
             height={100}
@@ -66,7 +66,7 @@ const Service = () => {
           <p className={Style.service_box_item_step}>
             <span>Step 4</span>
           </p>
-          <h3>Start trading</h3>
+          <h3>Earn money</h3>
           <p>
             Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money

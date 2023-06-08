@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { BsCircleFill } from "react-icons/bs";
 
 //INTERNAL IMPORT
@@ -9,16 +9,12 @@ import images from "../../img";
 const Category = () => {
   const CategoryArray = [
     {
-      images: images.creatorbackground1,
-      name: "Monkey",
-    },
-    {
       images: images.creatorbackground2,
       name: "Sports",
     },
     {
       images: images.creatorbackground3,
-      name: "Entertainment",
+      name: "Entirtment Art",
     },
     {
       images: images.creatorbackground4,
@@ -41,16 +37,8 @@ const Category = () => {
       name: "Hubby",
     },
     {
-      images: images.creatorbackground8,
-      name: "Bad Arts",
-    },
-    {
       images: images.creatorbackground9,
       name: " Arts",
-    },
-    {
-      images: images.creatorbackground10,
-      name: "My Fav",
     },
   ];
   return (

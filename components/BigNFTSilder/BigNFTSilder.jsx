@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
 import { TbArrowBigLeftLines, TbArrowBigRightLine } from "react-icons/tb";

@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { MdVerified } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
 
@@ -19,20 +19,19 @@ const FollowerTabCard = ({ i, el }) => {
   return (
     <div className={Style.FollowerTabCard}>
       <div className={Style.FollowerTabCard_rank}>
-        <p> 
+        <p>
           #{i + 1} <span>🥇</span>
         </p>
       </div>
 
-      <div className={Style.FollowerTabCard_box}> 
+      <div className={Style.FollowerTabCard_box}>
         <div className={Style.FollowerTabCard_box_img}>
           <Image
             className={Style.FollowerTabCard_box_img_img}
             src={el.background || images[`creatorbackground${i + 1}`]}
-            alt="profile background"
+            alt="profile braground"
             width={500}
             height={300}
-            objectFit="cover"
           />
         </div>
 
@@ -49,7 +48,7 @@ const FollowerTabCard = ({ i, el }) => {
         <div className={Style.FollowerTabCard_box_info}>
           <div className={Style.FollowerTabCard_box_info_name}>
             <h4>
-              Shreyans{/**Changes done at 6:40:00 */}
+              Shreyans
               {""}{" "}
               <span>
                 <MdVerified />

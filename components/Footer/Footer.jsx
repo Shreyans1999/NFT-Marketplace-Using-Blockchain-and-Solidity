@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { DiJqueryLogo } from "react-icons/di";
+import { useRouter } from "next/router";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
@@ -18,11 +19,11 @@ import images from "../../img";
 import { Discover, HelpCenter } from "../NavBar/index";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <div className={Style.footer}>
       <div className={Style.footer_box}>
         <div className={Style.footer_box_social}>
-          {/* <Image src={images.logo} alt="footer logo" height={100} width={100} /> */}
           <a href="/">
             <DiJqueryLogo className={Style.footer_box_social_logo} />
           </a>
@@ -70,7 +71,7 @@ const Footer = () => {
           </div>
           <div className={Style.subscribe_box_info}>
             <p>
-              Discover, collect, and sell extraordinary NFTs OpenSea is the
+              Discover, collect, and sell extraordinary NFTs XNFT is the
               world first and largest NFT marketplace
             </p>
           </div>
