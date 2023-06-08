@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
@@ -51,13 +51,16 @@ const collectionProfile = () => {
 
           <div className={Style.collectionProfile_box_middle_box}>
             {cardArray.map((el, i) => (
-              <div className={Style.collectionProfile_box_middle_box_item} key={i + 1}>
+              <div
+                className={Style.collectionProfile_box_middle_box_item}
+                key={i + 1}
+              >
                 <small>Floor price</small>
                 <p>${i + 1}95,4683</p>
                 <span>+ {i + 2}.11%</span>
               </div>
             ))}
-          </div> 
+          </div>
         </div>
       </div>
     </div>
