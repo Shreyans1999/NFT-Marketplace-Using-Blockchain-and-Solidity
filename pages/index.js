@@ -36,7 +36,7 @@ const Home = () => {
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 
-  /*useEffect(() => {
+  useEffect(() => {
     // if (currentAccount) {
     fetchNFTs().then((items) => {
       console.log(nfts);
@@ -44,38 +44,48 @@ const Home = () => {
       setNftsCopy(items);
     });
     // }
-  }, []);*/
+  }, []);
+
+  //CREATOR LIST
+
+  const creators = getTopCreators(nfts);
+  // console.log(creators);
 
   return (
-    <div className={Style.homePage}> 
-      <HeroSection/>
-      <Service/>
-      <BigNFTSilder/>
+    <div className={Style.homePage}>
+      <HeroSection />
+      <Service />
+      <BigNFTSilder />
       <Title
         heading="Audio Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
-      <AudioLive/>
-      <FollowerTab/>
-      <Slider/>
-      <Collection/>
+      <AudioLive />
+      {creators.length == 0 ? (
+        <Loader />
+      ) : (
+        <FollowerTab TopCreator={creators} />
+      )}
+
+      <Slider />
+      <Collection />
       <Title
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
-      <Filter/>
+      <Filter />
       {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
 
-      <Title 
+      <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."
       />
-      <Category/>
-      <Subscribe/>
-      <Brand/>
-      <Video/>
+      <Category />
+      <Video />
+      <Subscribe />
+      <Brand />
     </div>
   );
 };
 
-export default Home
+export default Home;

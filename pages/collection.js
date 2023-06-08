@@ -23,13 +23,13 @@ const collection = () => {
       image: images.nft_image_3,
     },
     {
-      image: images.nft_image_1,
+      image: images.nft_image_4,
     },
     {
-      image: images.nft_image_2,
+      image: images.nft_image_5,
     },
     {
-      image: images.nft_image_3,
+      image: images.nft_image_6,
     },
     {
       image: images.nft_image_1,
@@ -40,7 +40,7 @@ const collection = () => {
   ];
   return (
     <div className={Style.collection}>
-      <Banner bannerImage={images.creatorbackground1} />
+      <Banner bannerImage={images.Banner} />
       <CollectionProfile />
       <Filter />
       <NFTCardTwo NFTData={collectionArray} />

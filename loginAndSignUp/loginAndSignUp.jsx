@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 //INTERNALIMPORT
 import Style from "./loginAndSignUp.module.css";
@@ -53,7 +53,7 @@ const loginAndSignUp = () => {
         <div className={Style.user_box_input}>
           <div className={Style.user_box_input_box}>
             <label htmlFor="email">Email address</label>
-            <input type="email" placeholder="example@emample.com" />
+            <input type="email" placeholder="example@mail.com" />
           </div>
 
           <div className={Style.user_box_input_box}>
@@ -66,7 +66,7 @@ const loginAndSignUp = () => {
                 <a href="#">Forget password</a>
               </p>
             </label>
-            <input type="password" />
+            <input type="Password" />
           </div>
         </div>
 

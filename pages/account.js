@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback, useContext } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useDropzone } from "react-dropzone";
 
 //INTERNAL IMPORT
@@ -20,7 +20,7 @@ const account = () => {
     maxSize: 5000000,
   });
 
-  return ( 
+  return (
     <div className={Style.account}>
       <div className={Style.account_info}>
         <h1>Profile settings</h1>

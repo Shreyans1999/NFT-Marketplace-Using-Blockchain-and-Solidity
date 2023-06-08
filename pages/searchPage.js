@@ -23,16 +23,15 @@ const searchPage = () => {
     try {
       // if (currentAccount) {
       fetchNFTs().then((items) => {
-        //setNfts(items.reverse());
+        setNfts(items.reverse());
         setNftsCopy(items);
-        //console.log(nfts);
+        console.log(nfts);
       });
       // }
     } catch (error) {
       setError("Please reload the browser", error);
     }
   }, []);
-  
 
   const onHandleSearch = (value) => {
     const filteredNFTS = nfts.filter(({ name }) =>
@@ -52,42 +51,29 @@ const searchPage = () => {
     }
   };
 
-  const collectionArray = [
-    {
-      image: images.nft_image_1,
-    },
-    {
-      image: images.nft_image_2,
-    },
-    {
-      image: images.nft_image_3,
-    },
-    {
-      image: images.nft_image_1,
-    },
-    {
-      image: images.nft_image_2,
-    },
-    {
-      image: images.nft_image_3,
-    },
-    {
-      image: images.nft_image_1,
-    },
-    {
-      image: images.nft_image_2,
-    },
-  ];
+  // const collectionArray = [
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  //   images.nft_image_3,
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  //   images.nft_image_3,
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  // ];
   return (
     <div className={Style.searchPage}>
-      <Banner bannerImage={images.creatorbackground2} />
-      <SearchBar />
+      <Banner bannerImage={images.Banner} />
+      <SearchBar
+        onHandleSearch={onHandleSearch}
+        onClearSearch={onClearSearch}
+      />
       <Filter />
-      <NFTCardTwo NFTData={nfts} />
+      {nfts.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />}
       <Slider />
       <Brand />
     </div>
   );
 };
-/*changes done at 11:06:43*/
+
 export default searchPage;

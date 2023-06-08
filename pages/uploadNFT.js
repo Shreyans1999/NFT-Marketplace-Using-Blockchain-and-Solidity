@@ -26,7 +26,7 @@ const uploadNFT = () => {
             File types supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG,
             GLB, GLTF. Max size: 100 MB
           </p>
-        </div> 
+        </div>
 
         <div className={Style.uploadNFT_box_form}>
           <UploadNFT uploadToIPFS={uploadToIPFS} createNFT={createNFT} />

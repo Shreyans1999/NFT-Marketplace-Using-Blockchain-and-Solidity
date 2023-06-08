@@ -10,32 +10,34 @@ import Category from "./Category/Category";
 import Filter from "./Filter/Filter";
 import NFTCard from "./NFTCard/NFTCard";
 import Collection from "./Collection/Collection";
-import FollowerTab from "./FollowerTab/FollowerTab";
-import LikeProfile from "./LikeProfile/LikeProfile";
 import AudioLive from "./AudioLive/AudioLive";
+import LikeProfile from "./LikeProfile/LikeProfile";
+import FollowerTab from "./FollowerTab/FollowerTab";
 import Slider from "./Slider/Slider";
 import Brand from "./Brand/Brand";
 import Video from "./Video/Video";
 import Loader from "./Loader/Loader";
+import Error from "./Error/Error";
 
-
-export {Button, 
-        Footer, 
-        NavBar, 
-        HeroSection, 
-        Service, 
-        BigNFTSilder, 
-        Subscribe, 
-        Title, 
-        Category,
-        Filter,
-        NFTCard,
-        Collection,
-        FollowerTab,
-        LikeProfile,
-        AudioLive,
-        Slider,
-        Brand,
-        Video,
-        Loader,
-    };
+export {
+  Button,
+  Footer,
+  NavBar,
+  HeroSection,
+  Service,
+  BigNFTSilder,
+  Subscribe,
+  Title,
+  Category,
+  Filter,
+  NFTCard,
+  Collection,
+  AudioLive,
+  LikeProfile,
+  FollowerTab,
+  Slider,
+  Brand,
+  Video,
+  Loader,
+  Error,
+};

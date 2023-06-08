@@ -10,18 +10,18 @@ import {
   AuthorProfileCard,
   AuthorTaps,
   AuthorNFTCardBox,
-} from "../authorPage/componentIndex"; 
+} from "../authorPage/componentIndex";
 
 //IMPORT SMART CONTRACT DATA
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
-  const followerArray = [ 
+  const followerArray = [
     {
       background: images.creatorbackground1,
       user: images.user1,
-      seller: "7d64gf748849j47fy488444", 
-    },
+      seller: "7d64gf748849j47fy488444",
+    }, 
     {
       background: images.creatorbackground2,
       user: images.user2,
@@ -102,7 +102,8 @@ const author = () => {
       />
       <Title
         heading="Popular Creators"
-        paragraph="Click on music icon and enjoy NTF music or audio"
+        paragraph="Click on music icon and enjoy NTF music or audio
+"
       />
       <div className={Style.author_box}>
         {followerArray.map((el, i) => (
