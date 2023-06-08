@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 

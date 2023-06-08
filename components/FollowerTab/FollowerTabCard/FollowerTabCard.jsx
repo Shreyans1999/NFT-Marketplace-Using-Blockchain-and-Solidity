@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { MdVerified } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
 
