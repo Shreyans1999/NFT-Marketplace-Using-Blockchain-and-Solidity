@@ -10,17 +10,17 @@ import {
   AuthorProfileCard,
   AuthorTaps,
   AuthorNFTCardBox,
-} from "../authorPage/componentIndex";
+} from "../authorPage/componentIndex"; 
 
 //IMPORT SMART CONTRACT DATA
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext"; 10:31:03
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
-  const followerArray = [
+  const followerArray = [ 
     {
       background: images.creatorbackground1,
       user: images.user1,
-      seller: "7d64gf748849j47fy488444",
+      seller: "7d64gf748849j47fy488444", 
     },
     {
       background: images.creatorbackground2,
@@ -56,11 +56,11 @@ const author = () => {
   const [following, setFollowing] = useState(false);
 
   //IMPORT SMART CONTRACT DATA
-  /*const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(
+  const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(
     NFTMarketplaceContext
-  );*/
+  );
 
-  /*const [nfts, setNfts] = useState([]);
+  const [nfts, setNfts] = useState([]);
   const [myNFTs, setMyNFTs] = useState([]);
 
   useEffect(() => {
@@ -76,19 +76,19 @@ const author = () => {
       setMyNFTs(items);
       console.log(myNFTs);
     });
-  }, []); changes done at 10:48:00*/
+  }, []);
 
   return (
     <div className={Style.author}>
-      <Banner bannerImage={images.creatorbackground2} />
-      <AuthorProfileCard/>
+      <Banner bannerImage={images.Banner} />
+      <AuthorProfileCard currentAccount={currentAccount} />
       <AuthorTaps
         setCollectiables={setCollectiables}
         setCreated={setCreated}
         setLike={setLike}
         setFollower={setFollower}
-        setFollowing={setFollowing} 
-        //currentAccount={currentAccount}
+        setFollowing={setFollowing}
+        currentAccount={currentAccount}
       />
 
       <AuthorNFTCardBox
@@ -97,8 +97,8 @@ const author = () => {
         like={like}
         follower={follower}
         following={following}
-        /*nfts={nfts}
-        myNFTS={myNFTs}*/
+        nfts={nfts}
+        myNFTS={myNFTs}
       />
       <Title
         heading="Popular Creators"

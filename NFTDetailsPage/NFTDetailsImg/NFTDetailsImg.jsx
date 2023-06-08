@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { BsImages } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
@@ -59,12 +59,12 @@ const NFTDetailsImg = ({ nft }) => {
 
           <div className={Style.NFTDetailsImg_box_NFT_img}>
             <Image
-              src={images.nft_image_1 }
+              src={nft.image}
               className={Style.NFTDetailsImg_box_NFT_img_img}
               alt="NFT image"
               width={700}
               height={800}
-              style={{ objectFit: 'cover' }}
+              objectFit="cover"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ const NFTDetailsImg = ({ nft }) => {
 
         {description && (
           <div className={Style.NFTDetailsImg_box_description_box}>
-            <p>Tattood kitty gang is a collection of 666 badass kitty gangster</p>
+            <p>{nft.description}</p>
           </div>
         )}
 
@@ -97,11 +97,11 @@ const NFTDetailsImg = ({ nft }) => {
             <p>
               <small>Contract Address</small>
               <br></br>
-              0x50678565eert5678
+              {nft.seller}
             </p>
             <p>
               <small>Token ID</small>
-              &nbsp; &nbsp;
+              &nbsp; &nbsp; {nft.tokenId}
             </p>
           </div>
         )}
@@ -109,5 +109,5 @@ const NFTDetailsImg = ({ nft }) => {
     </div>
   );
 };
-/*changes done at 11:24:57*/
+
 export default NFTDetailsImg;

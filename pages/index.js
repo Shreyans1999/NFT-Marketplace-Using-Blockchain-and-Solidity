@@ -1,27 +1,56 @@
-import React from "react";
-import Style from "../styles/index.module.css";
-import { HeroSection, 
-        Service, 
-        BigNFTSlider,
-        Subscribe,
-        Title, 
-        Category,
-        Filter,
-        NFTCard,
-        Collection,
-        AudioLive,
-        FollowerTab,
-        Slider,
-        Brand,
-        Video,
-      } from "../components/componentsindex";
+import React, { useState, useEffect, useContext } from "react";
 
-const HOME = () => {
+//INTERNAL IMPORT
+import Style from "../styles/index.module.css";
+import {
+  HeroSection,
+  Service,
+  BigNFTSilder,
+  Subscribe,
+  Title,
+  Category,
+  Filter,
+  NFTCard,
+  Collection,
+  AudioLive,
+  FollowerTab,
+  Slider,
+  Brand,
+  Video,
+  Loader,
+} from "../components/componentsindex";
+import { getTopCreators } from "../TopCreators/TopCreators";
+
+//IMPORTING CONTRCT DATA
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+
+const Home = () => {
+  const { checkIfWalletConnected, currentAccount } = useContext(
+    NFTMarketplaceContext
+  );
+  useEffect(() => {
+    checkIfWalletConnected();
+  }, []);
+
+  const { fetchNFTs } = useContext(NFTMarketplaceContext);
+  const [nfts, setNfts] = useState([]);
+  const [nftsCopy, setNftsCopy] = useState([]);
+
+  /*useEffect(() => {
+    // if (currentAccount) {
+    fetchNFTs().then((items) => {
+      console.log(nfts);
+      setNfts(items.reverse());
+      setNftsCopy(items);
+    });
+    // }
+  }, []);*/
+
   return (
     <div className={Style.homePage}>
       <HeroSection/>
       <Service/>
-      <BigNFTSlider/>
+      <BigNFTSilder/>
       <Title
         heading="Audio Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
@@ -35,7 +64,8 @@ const HOME = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <Filter/>
-      <NFTCard/>
+      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
+
       <Title 
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."
@@ -48,4 +78,4 @@ const HOME = () => {
   );
 };
 
-export default HOME
+export default Home

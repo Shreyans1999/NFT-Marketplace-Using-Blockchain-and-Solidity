@@ -10,6 +10,7 @@ const NFTDetailsPage = ({ nft }) => {
       <div className={Style.NFTDetailsPage_box}>
         <NFTDetailsImg nft={nft} />
         <NFTDescription nft={nft} />
+        <NFTTabs nft={nft} />
       </div>
     </div>
   );

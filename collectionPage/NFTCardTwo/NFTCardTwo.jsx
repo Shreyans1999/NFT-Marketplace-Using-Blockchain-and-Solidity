@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { BsImage } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
@@ -12,7 +12,7 @@ import { LikeProfile } from "../../components/componentsindex";
 const NFTCardTwo = ({ NFTData }) => {
   const [like, setLike] = useState(false);
   const [likeInc, setLikeInc] = useState(21);
-  
+
   const likeNFT = () => {
     if (!like) {
       setLike(true);
@@ -49,7 +49,7 @@ const NFTCardTwo = ({ NFTData }) => {
                 alt="NFT"
                 width={500}
                 height={500}
-                style={{objectFit:"cover"}}
+                objectFit="cover"
                 className={Style.NFTCardTwo_box_img_img}
               />
             </div>
@@ -57,7 +57,7 @@ const NFTCardTwo = ({ NFTData }) => {
             <div className={Style.NFTCardTwo_box_info}>
               <div className={Style.NFTCardTwo_box_info_left}>
                 <LikeProfile />
-                <p>Clone #{i+1}</p>
+                <p>{el.name}</p>
               </div>
               <small>4{i + 2}</small>
             </div>

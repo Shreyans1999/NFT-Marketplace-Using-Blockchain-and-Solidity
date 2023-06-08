@@ -10,10 +10,10 @@ import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../img";
 
 //SMART CONTRACT IMPORT
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";changes done at 11:05:10 
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const searchPage = () => {
-  /*const { fetchNFTs, setError, currentAccount } = useContext(
+  const { fetchNFTs, setError, currentAccount } = useContext(
     NFTMarketplaceContext
   );
   const [nfts, setNfts] = useState([]);
@@ -23,15 +23,16 @@ const searchPage = () => {
     try {
       // if (currentAccount) {
       fetchNFTs().then((items) => {
-        setNfts(items.reverse());
+        //setNfts(items.reverse());
         setNftsCopy(items);
-        console.log(nfts);
+        //console.log(nfts);
       });
       // }
     } catch (error) {
       setError("Please reload the browser", error);
     }
   }, []);
+  
 
   const onHandleSearch = (value) => {
     const filteredNFTS = nfts.filter(({ name }) =>
@@ -49,7 +50,7 @@ const searchPage = () => {
     if (nfts.length && nftsCopy.length) {
       setNfts(nftsCopy);
     }
-  };*/
+  };
 
   const collectionArray = [
     {
@@ -82,7 +83,7 @@ const searchPage = () => {
       <Banner bannerImage={images.creatorbackground2} />
       <SearchBar />
       <Filter />
-      <NFTCardTwo NFTData={collectionArray} />
+      <NFTCardTwo NFTData={nfts} />
       <Slider />
       <Brand />
     </div>

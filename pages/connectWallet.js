@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "../styles/connectWallet.module.css";
 import images from "../img";
 
 //IMPORT FROM SMART CONTRACT
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";changes don eat 13:41:46
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const connectWallet = () => {
   const [activeBtn, setActiveBtn] = useState(1);
-  //const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);changes don eat 13:41:46
+  const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
   const providerArray = [
     {
       provider: images.provider1,
@@ -24,7 +24,7 @@ const connectWallet = () => {
       name: "walletlink",
     },
     {
-      provider: images.provider1,
+      provider: images.provider4,
       name: "Formatic",
     },
   ];
@@ -33,7 +33,7 @@ const connectWallet = () => {
       <div className={Style.connectWallet_box}>
         <h1>Connect your wallet</h1>
         <p className={Style.connectWallet_box_para}>
-          Connect with one of our avaliable wallet providers or create a new one
+          Connect with one of our avaliabl wallet providers or create a new one
         </p>
 
         <div className={Style.connectWallet_box_provider}>

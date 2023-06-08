@@ -1,8 +1,7 @@
 .bigNFTSlider_box{
-    margin:  0 auto;
+    margin: 0 auto;
     width: 80%;
-    padding-block: 8rem; 
-
+    padding-block: 6rem; 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
@@ -17,6 +16,7 @@
     padding: 2rem;
     z-index: 1111;
     height: 90vh;
+    /* margin: 2rem; */
 }
 
 .bigNFTSlider_box_left h2{
@@ -118,16 +118,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem;
     padding-block: 2rem 0rem;
 }
 
 .bigNFTSlider_box_left_sliderBtn{
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: right;
+    gap: 2rem;
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: -3rem;
 }
 
 .bigNFTSlider_box_left_sliderBtn_icon{
@@ -141,14 +141,21 @@
     padding: 1rem;
 }
 
-/* //---RIGHT SECTION */
+/*---RIGHT SECTION */
 
 .bigNFTSlider_box_right_box{
     position: relative;
+    align-items: center;
+    height: auto;
+  
 }
 
 .bigNFTSlider_box_right_box_img{
     border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    
 }
 
 .bigNFTSlider_box_right_box_like{
@@ -169,19 +176,19 @@
 @media screen and (max-width: 65em) {
     .bigNFTSlider_box{
         width: 90%;
-        padding-top: 28rem;
+        padding-top: 20rem;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .bigNFTSlider_box_left{
-        /* height: 120vh; */
-        height: 90vh;
+        height: 63vh;
         padding: 1.5rem;
     }
 
     .bigNFTSlider_box_right{
-        margin-top: -70rem;
+        margin-top: -55rem;
+
     }
 
     .bigNFTSlider_box_left_creator{
@@ -209,6 +216,11 @@
 
     .bigNFTSlider_box_left_bidding_box_timer_item p{
         font-size: 1rem;
+    }
+    .bigNFTSlider_box_left_button{
+        justify-content: right;
+        gap: 1rem;
+        padding-block: 2rem 0rem;
     }
 
 }

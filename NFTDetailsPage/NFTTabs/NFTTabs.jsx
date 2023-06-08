@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "./NFTTabs.module.css";
@@ -7,7 +7,7 @@ import Style from "./NFTTabs.module.css";
 const NFTTabs = ({ dataTab, icon }) => {
   return (
     <div className={Style.NFTTabs}>
-      {dataTab.map((el, i) => (
+      {dataTab?.map((el, i) => (
         <div className={Style.NFTTabs_box} key={i + 1}>
           <Image
             src={el}
@@ -18,7 +18,7 @@ const NFTTabs = ({ dataTab, icon }) => {
           />
           <div className={Style.NFTTabs_box_info}>
             <span>
-              Offer by $770 by <span>Ashwin</span>
+              Offer by $770 by <span>Naruto</span>
               {icon}
             </span>
 

@@ -6,9 +6,9 @@ import { Button, Category, Brand } from "../components/componentsindex";
 import NFTDetailsPage from "../NFTDetailsPage/NFTDetailsPage";
 
 //IMPORT SMART CONTRACT DATA
-//import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const NFTDetails = () => {
-  /*const { currentAccount } = useContext(NFTMarketplaceContext);
+  const { currentAccount } = useContext(NFTMarketplaceContext);
 
   const [nft, setNft] = useState({
     image: "",
@@ -23,11 +23,11 @@ const NFTDetails = () => {
   useEffect(() => {
     if (!router.isReady) return;
     setNft(router.query);
-  }, [router.isReady]);changes done at 11:16:52*/
+  }, [router.isReady]);
 
   return (
     <div>
-      <NFTDetailsPage />
+      <NFTDetailsPage nft={nft} />
       <Category />
       <Brand />
     </div>
