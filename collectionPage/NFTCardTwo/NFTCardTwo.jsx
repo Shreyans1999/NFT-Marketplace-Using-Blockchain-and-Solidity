@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { BsImage } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";

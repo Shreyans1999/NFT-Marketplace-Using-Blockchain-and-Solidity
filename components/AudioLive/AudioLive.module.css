@@ -1,13 +1,13 @@
 
 .audioLive{
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .audioLive_box{
-    width: 80%;
+    width: 86%;
     margin: 0 auto;
-    padding-block: 2rem 8rem;
+    padding-block: 2rem 4rem;
 
     display: grid;
     grid-template-columns: 2.5fr 1fr;
@@ -43,7 +43,7 @@
 
 @media screen and (min-device-width: 377px) and (max-device-width: 425px) {
     .audioLive_box{
-        width: 90%;
+        width: 86%;
         grid-template-columns: 1fr;
     }
 
@@ -58,7 +58,7 @@
 
 @media screen and (min-device-width: 427px) and (max-device-width: 768px) {
     .audioLive_box{
-        width: 90%;
+        width: 86%;
         grid-template-columns: 1fr;
     }
 

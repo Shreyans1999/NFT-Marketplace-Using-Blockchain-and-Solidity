@@ -8,7 +8,7 @@ import Style from "./AudioCard.module.css";
 import images from "../../../img";
 import LikeProfile from "../../LikeProfile/LikeProfile";
 
-const AudioCard = () => {
+const AudioCard2 = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
 
@@ -86,7 +86,7 @@ const AudioCard = () => {
 
         <div className={Style.audioCard_box_img}>
           <Image
-            src={images.creatorbackground10}
+            src={images.Audio_2}
             alt="background"
             width={500}
             height={500}
@@ -97,4 +97,4 @@ const AudioCard = () => {
   );
 };
 
-export default AudioCard;
+export default AudioCard2;
