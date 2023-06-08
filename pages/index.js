@@ -47,7 +47,7 @@ const Home = () => {
   }, []);*/
 
   return (
-    <div className={Style.homePage}>
+    <div className={Style.homePage}> 
       <HeroSection/>
       <Service/>
       <BigNFTSilder/>
