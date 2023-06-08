@@ -64,7 +64,7 @@ const AuthorProfileCard = ({ currentAccount }) => {
 
         <div className={Style.AuthorProfileCard_box_info}>
           <h2>
-            Naruto Uzumaki{""}{" "}
+            Shreyans Saklecha{""}{" "}
             <span>
               <MdVerified />
             </span>{" "}
