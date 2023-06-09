@@ -1,9 +1,9 @@
 
 .audioPlayer_box{
     display: grid;
-    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-columns: 2fr 5fr 1fr;
     align-items: center;
-    gap: 1rem;
+    gap: 1.3rem;
     line-height: 0;
     background-color:  var(--bg-shadow-dark-color);
     padding: .5rem 1rem;
@@ -28,9 +28,8 @@
 
 .audioPlayer_box_info_box_price{
     border:  1px solid var(--icons-color);
-    font-size: .7rem;
-    text-align-last: center;
-    width: 30%;
+    font-size: .8rem;
+    width: 40%;
     font-weight: 600;
     border-radius: .2rem;
 }
@@ -38,7 +37,7 @@
 .audioPlayer_box_info_box_price small{
     background-color: var(--icons-color);
     color: var(--main-bg-color);
-    padding: .1rem .2rem;
+    padding: .1rem .3rem;
     border-radius: .2rem;
 }
 
@@ -47,10 +46,10 @@
 }
 
 .audioPlayer_box_playBtn{
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: var(--icons-color);
     border-radius: 50%;
     color: var(--main-bg-color);
-    padding: .8rem;
+    padding: 1rem;
     cursor: pointer;
 }

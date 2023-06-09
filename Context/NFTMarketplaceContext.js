@@ -143,7 +143,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
     try {
       const added = await client.add(data);
-      const url = `${subdomain}/ipfs/${added.path}`;
+      const url = `https://infura-ipfs.io/ipfs/${added.path}`;
 
       await createSale(url, price);
       router.push("/searchPage");

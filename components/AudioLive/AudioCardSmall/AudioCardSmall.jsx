@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
 
 //INTERNAL IMPORT
@@ -7,7 +7,7 @@ import Style from "./AudioCardSmall.module.css";
 import images from "../../../img";
 import LikeProfile from "../../LikeProfile/LikeProfile";
 
-const AudioCardSmall2 = () => {
+const AudioCardSmall = () => {
   const [play, setPlay] = useState(false);
 
   const playMusic = () => {
@@ -21,7 +21,7 @@ const AudioCardSmall2 = () => {
     <div className={Style.audioPlayer}>
       <div className={Style.audioPlayer_box}>
         <Image
-          src={images.creatorbackground6}
+          src={images.creatorbackground1}
           alt="music"
           width={100}
           height={100}
@@ -50,4 +50,4 @@ const AudioCardSmall2 = () => {
   );
 };
 
-export default AudioCardSmall2;
+export default AudioCardSmall;
