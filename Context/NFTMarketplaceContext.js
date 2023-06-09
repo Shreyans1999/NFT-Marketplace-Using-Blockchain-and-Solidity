@@ -183,14 +183,14 @@ export const NFTMarketplaceProvider = ({ children }) => {
   //--FETCH NFTS FUNCTION
 
   const fetchNFTs = async () => {
-    try {
-      const provider = new ethers.providers.JsonRpcProvider(
-        process.env.NEXT_PUBLIC_POLYGON_MUMBAI_RPC
-      );
-
+    try 
+    {
+      if(currentAccount){
+      const provider = new ethers.providers.JsonRpcProvider();
       const contract = fetchContract(provider);
 
       const data = await contract.fetchMarketItems();
+      console.log(data);
 
       const items = await Promise.all(
         data.map(
@@ -199,7 +199,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
             const {
               data: { image, name, description },
-            } = await axios.get(tokenURI, {});
+            } = await axios.get(tokenURI);
             const price = ethers.utils.formatUnits(
               unformattedPrice.toString(),
               "ether"
@@ -219,8 +219,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
         )
       );
       return items;
-
-      // }
+      }
     } catch (error) {
       // setError("Error while fetching NFTS");
       // setOpenError(true);
@@ -229,7 +228,9 @@ export const NFTMarketplaceProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchNFTs();
+    if(currentAccount){
+      fetchNFTs();
+    }
   }, []);
 
   //--FETCHING MY NFT OR LISTED NFTs
