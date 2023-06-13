@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -92,7 +92,7 @@ const NFTDescription = ({ nft }) => {
     }
   };
 
-  const openOwner = () => {
+  const openOwmer = () => {
     if (!owner) {
       setOwner(true);
       setHistory(false);
@@ -180,7 +180,7 @@ const NFTDescription = ({ nft }) => {
                 {/* <Link href={{ pathname: "/author", query: `${nft.seller}` }}> */}
                 <Link href={{ pathname: "/author" }}>
                   <span>
-                    Naruto <MdVerified />
+                    Karli Costa <MdVerified />
                   </span>
                 </Link>
               </div>
@@ -198,7 +198,7 @@ const NFTDescription = ({ nft }) => {
               <div className={Style.NFTDescription_box_profile_box_right_info}>
                 <small>Collection</small> <br />
                 <span>
-                  Digital Art <MdVerified />
+                  Mokeny app <MdVerified />
                 </span>
               </div>
             </div>
@@ -252,23 +252,23 @@ const NFTDescription = ({ nft }) => {
               >
                 <small>Current Bid</small>
                 <p>
-                  {nft.price} ETH <span>( ≈ $3,211.22)</span>
+                  {nft.price} ETH <span>( ≈ $3,221.22)</span>
                 </p>
               </div>
 
-              <span>[21 in stock]</span>
+              <span>[96 in stock]</span>
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_button}>
-              {currentAccount == nft?.seller?.toLowerCase() ? (
+              {currentAccount == nft.seller.toLowerCase() ? (
                 <p>You can't buy your own NFT</p>
-              ) : currentAccount == nft?.owner?.toLowerCase() ? (
+              ) : currentAccount == nft.owner.toLowerCase() ? (
                 <Button
                   icon={<FaWallet />}
                   btnName="List on Marketplace"
                   handleClick={() =>
                     router.push(
-                      `/reSellToken?id= ${nft.tokenId}&tokenURI= ${nft.tokenURI}&price= ${nft.price}`
+                      `/reSellToken?id=${nft.tokenId}&tokenURI=${nft.tokenURI}&price=${nft.price}`
                     )
                   }
                   classStyle={Style.button}
@@ -293,7 +293,7 @@ const NFTDescription = ({ nft }) => {
             <div className={Style.NFTDescription_box_profile_biding_box_tabs}>
               <button onClick={(e) => openTabs(e)}>Bid History</button>
               <button onClick={(e) => openTabs(e)}>Provanance</button>
-              <button onClick={() => openOwner()}>Owner</button>
+              <button onClick={() => openOwmer()}>Owner</button>
             </div>
 
             {history && (

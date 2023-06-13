@@ -3,7 +3,7 @@ import { MdOutlineHttp, MdOutlineAttachFile } from "react-icons/md";
 import { FaPercent } from "react-icons/fa";
 import { AiTwotonePropertySafety } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 //INTERNAL IMPORT
@@ -76,7 +76,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
           <label htmlFor="nft">Item Name</label>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="shoaib bhai"
             className={formStyle.Form_box_input_userName}
             onChange={(e) => setName(e.target.value)}
           />
@@ -91,7 +91,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
 
             <input
               type="text"
-              placeholder="www.example.com"
+              placeholder="website"
               onChange={(e) => setWebsite(e.target.value)}
             />
           </div>
@@ -110,7 +110,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
             id=""
             cols="30"
             rows="6"
-            placeholder="Description about item..."
+            placeholder="something about yourself in few words"
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <p>
@@ -176,7 +176,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
               </div>
               <input
                 type="text"
-                placeholder="Kb/MB"
+                placeholder="165MB"
                 onChange={(e) => setFileSize(e.target.value)}
               />
             </div>
@@ -189,7 +189,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
               </div>
               <input
                 type="text"
-                placeholder="Ex. JPEG, PNG, Mp4, etc.."
+                placeholder="Propertie"
                 onChange={(e) => setProperties(e.target.value)}
               />
             </div>

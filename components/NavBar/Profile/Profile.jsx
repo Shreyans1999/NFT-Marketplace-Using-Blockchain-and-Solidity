@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
 import { TbDownloadOff, TbDownload } from "react-icons/tb";
@@ -14,7 +14,7 @@ const Profile = ({ currentAccount }) => {
     <div className={Style.profile}>
       <div className={Style.profile_account}>
         <Image
-          src={images.shreyans}
+          src={images.user1}
           alt="user profile"
           width={50}
           height={50}

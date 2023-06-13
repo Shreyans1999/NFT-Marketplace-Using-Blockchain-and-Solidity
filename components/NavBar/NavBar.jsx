@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { DiJqueryLogo } from "react-icons/di";
 //----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
@@ -29,14 +29,14 @@ const NavBar = () => {
 
   const openMenu = (e) => {
     const btnText = e.target.innerText;
-    if (btnText === "Discover") {
-      setDiscover(!discover);
+    if (btnText == "Discover") {
+      setDiscover(true);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (btnText === "Help Center") {
+    } else if (btnText == "Help Center") {
       setDiscover(false);
-      setHelp(!help);
+      setHelp(true);
       setNotification(false);
       setProfile(false);
     } else {
@@ -147,8 +147,8 @@ const NavBar = () => {
               <Image
                 src={images.user1}
                 alt="Profile"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onClick={() => openProfile()}
                 className={Style.navbar_container_right_profile}
               />

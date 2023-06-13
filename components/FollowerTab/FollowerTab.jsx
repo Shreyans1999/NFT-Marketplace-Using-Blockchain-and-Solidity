@@ -11,7 +11,7 @@ import FollowerTabCard from "./FollowerTabCard/FollowerTabCard";
 import images from "../../img";
 
 const FollowerTab = ({ TopCreator }) => {
-  //  const CardArray = [
+  // const CardArray = [
   //   {
   //     background: images.creatorbackground1,
   //     user: images.user1,
@@ -43,7 +43,7 @@ const FollowerTab = ({ TopCreator }) => {
   //   {
   //     background: images.creatorbackground8,
   //     user: images.user8,
-  //    },
+  //   },
   // ];
   const FollowingArray = [
     {
